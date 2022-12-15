@@ -1,4 +1,4 @@
-package main.java.com.study.jdbc.main;
+package main.java.com.study.jdbc.main.dml;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -7,7 +7,7 @@ import java.sql.SQLException;
 
 import main.java.com.study.jdbc.util.DBConnection;
 
-public class JdbcTest1 {
+public class JdbcSelect1 {
 
 	public static void main(String[] args) {
 		Connection connection = DBConnection.getinstance().getConnection(); // DB연결
@@ -23,7 +23,7 @@ public class JdbcTest1 {
 
 			while (rs.next()) { // rs.next가 거짓일 때는 행을 다 출력, 비었을 때는 false가 된다.
 				System.out.println("id: " + rs.getInt(1) // rs.getInt(1) 괄호안에 들어있는 건 컬럼 번호다. 1번 부터 시작
-				+ "\t name: " + rs.getString(2) // 이름
+				+ "\t name: " + rs.getString(2)
 				+ "\t score: " + rs.getInt(3));
 			}
 
